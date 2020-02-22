@@ -18,4 +18,18 @@ namespace empresa{
     document.getElementById("codC").textContent = c.getCodCliente().toString();
     document.getElementById("limiteC").textContent = "R$ " + c.getLimite().toString();
     document.getElementById("saldoC").textContent = "R$ " +c.getSaldo().toString();
+
+
+    let f = new Funcionario("Claudio Dollynho","111.111.111-11");
+    f.setIdade(32);
+    f.setCodFuncionario(456);
+    f.setValorDia(100);
+
+    document.getElementById("nomeF").textContent =  f.getNome();
+    document.getElementById("cpfF").textContent = f.getCpf();
+    document.getElementById("idadeF").textContent = f.getIdade().toString();
+    document.getElementById("codF").textContent = f.getCodFuncionario().toString();
+    document.getElementById("valorDiaF").textContent = "R$ " + f.getValorDia();
+    document.getElementById("salarioF").textContent = "R$ " + f.calcularSalario();
+
 }
