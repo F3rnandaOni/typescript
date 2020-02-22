@@ -22,5 +22,14 @@ namespace empresa{
         calcularSalario(): number{
             return this.valorDia * 30;
         }
+        //sobrecarga de método
+        //calcularSalario(desconto:number): number{
+            //return (this.valorDia * 30)-desconto;
+        //}
+
+        //sobrecarga de método - typescript
+        //calcularSalario(desconto?:number): number{
+            //return (this.valorDia * 30)-desconto;
+        //}
     }
 }
