@@ -1,12 +1,12 @@
 namespace empresa{
-    class Empresa{
+    export class Empresa{
         private nomeEmpresa:string;
         private atividade:string;
         private cidade:string;
         private clientes: Array<Cliente> = [];
         private funcionarios: Array<Funcionario> = [];
 
-        getNomeEmpresa():String{
+        getNomeEmpresa():string{
             return this.nomeEmpresa;
         }
 

@@ -46,4 +46,27 @@ namespace empresa{
     document.getElementById("valorDiaG").textContent = "R$ " + g.getValorDia();
     document.getElementById("salarioG").textContent = "R$ " + g.calcularSalario();
     document.getElementById("setorG").textContent = g.getSetor();
+
+    let e = new Empresa();
+    e.setNomeEmpresa("JonasCorp");
+    e.setCidade("Barueri");
+    e.setAtividade("T.I");
+    e.addCliente(c);
+    e.addFuncionario(f);
+    e.addFuncionario(g);
+
+    document.getElementById("nomeE").textContent =  e.getNomeEmpresa();
+    document.getElementById("atividadeE").textContent = e.getAtividade();
+    document.getElementById("cidadeE").textContent = e.getCidade();
+
+    let tbFuncionario = document.getElementById("tbFuncionario");
+
+    e.getFuncionario().forEach(e =>{
+        let nome = e.getNome();
+        if(e instanceof Gerente){
+            nome += "  Gerente";
+        }
+        let html = "<tr><td>"+nome+"</td><td>"+e.getCodFuncionario()+"</td></tr>";
+        tbFuncionario.innerHTML += html;
+    });
 }
