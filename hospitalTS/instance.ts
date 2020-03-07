@@ -74,7 +74,7 @@ namespace hospital{
     document.getElementById("codP3").textContent = p3.getCodPaciente().toString();
 
     let h = new Hospital();
-    h.setNome("Emílio Benício");
+    h.setNome("Emílio Benícios");
     h.addEnfermeiro(e);
     h.addEnfermeiro(e2);
     h.addEnfermeiro(e3);
